@@ -1,0 +1,26 @@
+{
+  "name": "pjnosql.io",
+  "version": "1.0.0",
+  "description": "Api CRUD, disciplina Banco de Dados 2, projeto do 4º período usando o mongo DB ATLAS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManoelAFJr/PJnoSQL.io.git"
+  },
+  "author": "ManoelAFJr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManoelAFJr/PJnoSQL.io/issues"
+  },
+  "homepage": "https://github.com/ManoelAFJr/PJnoSQL.io#readme",
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.1",
+    "nodemon": "^2.0.19"
+  }
+}
