@@ -22,30 +22,30 @@ const addPerson = async(req, res)=>{
         res.status(200).send('User save sucess');
     }).catch(error=>{
         res.status(401).send(
-            'Error when saving, check Database', error);
+            'Error when saving, check Database');
     })
 };
 
 const updatePerson = async(req, res)=>{
     const result = await Person.updateOne({email:req.body.email},
-        {$set:{name:req.body.name}},
-        {$set:{last_name:req.body.last_name}});
+        {$set:{name:req.body.name}, 
+        $set:{last_name:req.body.last_name}});
         if(result.modifiedCount > 0){
             res.status(200).send('User update sucess');
         }else{
-            res.status(400).send('Error when update');
+            res.status(401).send('Error when update');
         }
 };
 
-const deletPerson = async(req, res)=>{
+const deletePerson = async(req, res)=>{
     const result = await Person.deleteOne({email:req.body.email});
     if(result.deletedCount > 0){
         res.status(200).send('User delete sucess');
     }else{
-        res.status(200).send(alert('User not delete'));
+        res.status(401).send('User not delete');
     }
 };
 
 module.exports = {
-    getPerson, addPerson, searchPerson, updatePerson, deletPerson
+    getPerson, addPerson, searchPerson, updatePerson, deletePerson
 }
