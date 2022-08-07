@@ -1,7 +1,7 @@
 
 const Person = require('../model/model');
 
-export const searchPerson = async(req, res)=>{
+const searchPerson = async(req, res)=>{
     const person = await Person.find({
         email: req.params.email}, {__v:false});
     if(person.lenght > 0){
@@ -11,12 +11,12 @@ export const searchPerson = async(req, res)=>{
     }
 }; 
 
-export const getPerson = async(req, res)=>{
+const getPerson = async(req, res)=>{
     const person = await Person.find({}, {_id:false, __v:false});
     res.status(200).send(person);
 };
 
-export const addPerson = async(req, res)=>{
+const addPerson = async(req, res)=>{
     const person = new Person(req.body);
     person.save().then(()=>{
         res.status(200).send('User save sucess');
@@ -26,7 +26,7 @@ export const addPerson = async(req, res)=>{
     })
 };
 
-export const updatePerson = async(req, res)=>{
+const updatePerson = async(req, res)=>{
     const result = await Person.updateOne({email:req.body.email},
         {$set:{name:req.body.name}},
         {$set:{last_name:req.body.last_name}});
@@ -37,7 +37,7 @@ export const updatePerson = async(req, res)=>{
         }
 };
 
-export const deletPerson = async(req, res)=>{
+const deletPerson = async(req, res)=>{
     const result = await Person.deleteOne({email:req.body.email});
     if(result.deletedCount > 0){
         res.status(200).send('User delete sucess');
@@ -45,3 +45,7 @@ export const deletPerson = async(req, res)=>{
         res.status(200).send(alert('User not delete'));
     }
 };
+
+module.exports = {
+    getPerson, addPerson, searchPerson, updatePerson, deletPerson
+}
