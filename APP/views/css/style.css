@@ -1,0 +1,56 @@
+:root{
+    --primary-color:rgb(53, 255, 211);
+    --secondary-color:rgb(47, 165, 173);
+}
+
+body  {
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans';
+}
+.busca{
+    text-align: center;
+    float: right;
+    padding: 20px;
+}
+#left{
+    float: left;
+    margin: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#right {
+    margin: 20px;
+    float: right;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+@media (max-width: 460px) {
+    #container {
+    display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+#right > ul{
+    margin: 0px;
+    padding: unset;
+}
+@media (max-width: 560px) {
+    #right {
+    display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+#result >p{
+    padding: 0px;
+    margin: 5px;
+    font-size: larger;
+    font-style: italic;
+    font-family: serif;
+}
