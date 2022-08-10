@@ -1,6 +1,11 @@
 require('dotenv').config();
 const mongoose = require('mongoose')
 
+/*  mongoose.connect(
+    `mongodb://${process.env.MONGO_HOST}/`+
+    `${process.env.MONGO_DATABASE}`
+  );
+ */
 
 main().catch(err => console.log(err));
 
