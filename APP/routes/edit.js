@@ -13,13 +13,6 @@ function ensureAuthenticated(req, res, next) {
   }
 }
 
-edit.use(function (req, res, next) {
-  res.locals.currentUser = req.user;
-  res.locals.errors = req.flash('error');
-  res.locals.infos = req.flash('info');
-  next();
-});
-
 edit.get("/users/:username", function (req, res, next) {
   User.findOne({ username: req.params.username }, function (err, user) {
     if (err) {

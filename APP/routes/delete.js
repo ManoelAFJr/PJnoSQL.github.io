@@ -11,13 +11,6 @@ function ensureAuthenticated(req, res, next) {
     }
 }
 
-delet.use(function (req, res, next) {
-    res.locals.currentUser = req.user;
-    res.locals.errors = req.flash('error');
-    res.locals.infos = req.flash('info');
-    next();
-});
-
 delet.post("/delete/:email", function (req, res, next) {
   const email = req.params.email;
   User.deleteOne({ email: email}, function (err, user) {

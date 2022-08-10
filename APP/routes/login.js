@@ -12,13 +12,6 @@ function ensureAuthenticated(req, res, next) {
     }
 }
 
-login.use(function (req, res, next) {
-    res.locals.currentUser = req.user;
-    res.locals.errors = req.flash('error');
-    res.locals.infos = req.flash('info');
-    next();
-  });
-
 login.get('/login', function (req, res) {
     res.render('login');
   });
