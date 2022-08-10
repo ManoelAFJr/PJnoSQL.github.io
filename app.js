@@ -1,4 +1,4 @@
-require('dotenv').config();
+const dotenv = require('dotenv');
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const express = require("express");
@@ -15,6 +15,7 @@ const routeLogin = require('./APP/routes/login');
 const routeSingup = require('./APP/routes/singup');
 
 const app = express();
+dotenv.config();
 setUpPassport();
 
 app.set("port", process.env.API_PORT || 8000);
