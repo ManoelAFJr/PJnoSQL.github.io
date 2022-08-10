@@ -1,0 +1,26 @@
+<% include _main %>
+
+<h1 style="font-family: Apple Chancery, cursive;">MJ</h1>
+
+<% users.forEach(function(user) { %>
+
+  <div class="card" style="margin: 10px;">
+    <div class="card-header">
+      <a href="/users/<%= user.username %>">
+        <%= user.displayName || user.name() %>
+      </a>
+    </div>
+    <% if (user.bio) { %>
+      <div class="card-body" >
+        <blockquote class="blockquote mb-0">
+          <p> <%= user.bio %> </p>
+          <footer class="blockquote-footer"> Status <cite title="Source Title"> <%= user.username %> </cite></footer>
+        </blockquote>
+    </div>
+    <% } %>
+  </div>
+
+<% }) %>
+
+<% include _footer %>
+

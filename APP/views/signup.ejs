@@ -1,0 +1,28 @@
+<% include _main %>
+<div style="padding: 20px;">
+  <h1 style="padding: 20px;">
+    Cadastrar
+  </h1>
+  <div class="text-center border-primary mb-3" style="padding: 20px;">
+    <form action="/signup" method="post">
+      <div class="mb-3">
+        <input name="username" type="text" class="form-control"
+        placeholder="Username" required>
+      </div>
+      <div class="mb-3">
+        <input name="email" type="email" class="form-control" 
+        placeholder="E-mail" required autofocus>
+      </div>
+      <div class="mb-3">
+        <input name="password" type="password" class="form-control"
+        placeholder="Senha" required>
+      </div>
+      <input type="submit" value="Sign up" class="btn btn-primary">
+    </form>
+  </div>
+</div>
+
+
+
+
+<% include _footer %>

@@ -1,0 +1,43 @@
+<% include _main %>
+<div style="margin: 20px;">
+<% if ((currentUser) && (currentUser.id === user.id)) { %>
+  <div class="navbar-right" style="margin: 10px;">
+    <ul class="nav justify-content-end">
+      <li class="nav-item" style="margin: 10px;">
+        <a href="/edit" type="button" class="pull-right btn btn-outline-success">Atualize seu perfil</a> 
+      </li>
+      <li class="nav-item" style="margin: 10px;">
+        <a href="/delete" type="button" class="pull-right btn btn-outline-danger">Delete perfil</a>
+      </li>
+    </ul>
+  </div>
+ 
+  
+<% } %>
+
+<div class="card border-primary mb-3">
+  <h1 class="card-header text-bg-info mb-3">
+    <%= user.displayName %> 
+  </h1>
+  <div class="card-body">
+    <% if (user.telefone) { %>
+    <h4>Telefone: </h4>
+      <p> <%= user.telefone %> </p>
+  </div>   
+  <% } %>
+  <div class="card-body">
+    <% if (user.bio) { %>
+    <blockquote class="blockquote mb-0" >
+      <h4>Bios: </h4>
+      <p> <%= user.bio %> </p>
+      <footer class="blockquote-footer " style="justify-content: right;">
+        Cadastrou-se em: 
+        <cite title="Source Title"> <%= user.created %> </cite>
+      </footer>
+    </blockquote>
+  </div>
+  <% } %>
+</div>
+
+</div>
+<% include _footer %>

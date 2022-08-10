@@ -1,0 +1,20 @@
+
+<% include _main %>
+<div style="padding: 20px;">
+  <h1 style="padding: 20px;">
+    Deletar Perfil
+  </h1>
+  <div class="text-center border-primary mb-3" style="padding: 20px;">
+    <form action="/delete" method="post" if-match="*">
+      <input style="margin: 10px;" name="username" type="text" class="form-control" 
+        placeholder="Usuario Cadastrado" required autofocus>  
+      <input style="margin: 10px;"  name="email" type="email" class="form-control" 
+        placeholder="E-mail" required autofocus>
+        <input style="margin: 10px;"  type="submit" value="delete" class="btn btn-primary btn-block">
+      </form>
+  </div>
+</div>
+
+
+
+<% include _footer %>
