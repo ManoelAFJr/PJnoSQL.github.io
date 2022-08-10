@@ -1,6 +1,6 @@
 const bcrypt = require("bcrypt-nodejs");
 const { request } = require("express");
-const mongoose = require('../database/bd');
+const mongoose = require('../data/bd');
 
 const SALT_FACTOR = 10;
 

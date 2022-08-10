@@ -1,7 +1,7 @@
 const express = require("express");
 const passport = require("passport");
 const edit = express.Router();
-const User = require('../models/person')
+const User = require('../model/person')
 
 
 function ensureAuthenticated(req, res, next) {

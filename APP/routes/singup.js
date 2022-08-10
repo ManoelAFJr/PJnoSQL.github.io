@@ -1,6 +1,6 @@
 const express = require('express');
 const passport = require('passport');
-const User = require('../models/person')
+const User = require('../model/person')
 const singUp = express.Router();
 
 function ensureAuthenticated(req, res, next) {

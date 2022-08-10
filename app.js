@@ -8,11 +8,11 @@ const path = require("path");
 const setUpPassport = require("./setup");
 const session = require("express-session");
 
-const routeDelet = require('./routes/delete');
-const routeEdit = require('./routes/edit');
-const routeIndex = require('./routes/index');
-const routeLogin = require('./routes/login');
-const routeSingup = require('./routes/singup');
+const routeDelet = require('./APP/routes/delete');
+const routeEdit = require('./APP/routes/edit');
+const routeIndex = require('./APP/routes/index');
+const routeLogin = require('./APP/routes/login');
+const routeSingup = require('./APP/routes/singup');
 
 const app = express();
 setUpPassport();
@@ -21,7 +21,7 @@ app.set("port", process.env.API_PORT || 8000);
 
 app.use(express.static(path.join(__dirname, "public")));
 app.set("views", __dirname + "'./public/style'");
-app.set("views", path.join(__dirname, "view"));
+app.set("views", path.join(__dirname, "APP/views"));
 app.set('view engine', 'ejs');
 
 

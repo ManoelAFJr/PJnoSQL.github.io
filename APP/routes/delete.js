@@ -1,5 +1,5 @@
 const express = require('express');
-const User = require('../models/person')
+const User = require('../model/person')
 const delet = express.Router();
 
 function ensureAuthenticated(req, res, next) {
