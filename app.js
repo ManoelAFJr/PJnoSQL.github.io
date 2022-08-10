@@ -18,7 +18,7 @@ const app = express();
 dotenv.config();
 setUpPassport();
 
-app.set("port", process.env.API_PORT || 8000);
+app.set("port", process.env.PORT || 3000);
 
 app.use(express.static(path.join(__dirname, "public")));
 app.set("views", __dirname + "'./public/style'");
