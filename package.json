@@ -4,7 +4,7 @@
   "description": "Api CRUD, disciplina Banco de Dados 2, projeto do 4º período usando o mongo DB ATLAS",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
   "repository": {
@@ -17,7 +17,7 @@
     "url": "https://github.com/ManoelAFJr/PJnoSQL.io/issues"
   },
   "homepage": "https://github.com/ManoelAFJr/PJnoSQL.io#readme",
-  "devDependencies": {
+  "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.6.5",
     "connect-flash": "^0.1.1",
