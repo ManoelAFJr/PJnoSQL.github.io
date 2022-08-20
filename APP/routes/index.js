@@ -3,14 +3,6 @@ const passport = require('passport');
 const User = require('../model/person');
 const index = express.Router();
 
-function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) {
-    next();
-  } else {
-    req.flash("info", "You must authenticate to view this page.");
-    res.redirect("/login");
-  }
-}
 
 index.use(function (req, res, next) {
   res.locals.currentUser = req.user;

@@ -7,7 +7,7 @@ function ensureAuthenticated(req, res, next) {
       next();
     } else {
       req.flash('info', 'You must log in to gain access!');
-      res.redirect('/login');
+      res.redirect('/');
     }
 }
 

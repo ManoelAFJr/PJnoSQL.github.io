@@ -3,14 +3,6 @@ const passport = require('passport');
 const User = require('../model/person')
 const singUp = express.Router();
 
-function ensureAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
-      next();
-    } else {
-      req.flash('info', 'You must log in to gain access!');
-      res.redirect('/login');
-    }
-}
 
 singUp.get("/signup", function (req, res) {
   res.render("signup");
